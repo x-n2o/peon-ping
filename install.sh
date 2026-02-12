@@ -21,7 +21,7 @@ SETTINGS="$BASE_DIR/settings.json"
 REPO_BASE="https://raw.githubusercontent.com/PeonPing/peon-ping/main"
 
 # All available sound packs (add new packs here)
-PACKS="acolyte_ru aom_greek glados peon peon_cz peon_es peon_fr peon_pl peon_ru peasant peasant_cz peasant_es peasant_fr peasant_ru ra2_soviet_engineer sc_battlecruiser sc_firebat sc_kerrigan sc_medic sc_scv sc_tank sc_terran sc_vessel tf2_engineer"
+PACKS="acolyte_ru aom_greek glados peon peon_cz peon_es peon_fr peon_pl peon_ru peasant peasant_cz peasant_es peasant_fr peasant_ru ra2_kirov ra2_soviet_engineer sc_battlecruiser sc_firebat sc_kerrigan sc_medic sc_scv sc_tank sc_terran sc_vessel tf2_engineer"
 
 # --- Platform detection ---
 detect_platform() {
@@ -159,7 +159,9 @@ for cat in m.get('categories', {}).values():
             seen.add(f)
             print(f)
 " | while read -r sfile; do
-      curl -fsSL "$REPO_BASE/packs/$pack/sounds/$sfile" -o "$INSTALL_DIR/packs/$pack/sounds/$sfile" </dev/null
+      if ! curl -fsSL "$REPO_BASE/packs/$pack/sounds/$sfile" -o "$INSTALL_DIR/packs/$pack/sounds/$sfile" </dev/null 2>/dev/null; then
+        echo "  Warning: failed to download $pack/sounds/$sfile" >&2
+      fi
     done
   done
   if [ "$UPDATING" = false ]; then

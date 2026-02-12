@@ -97,6 +97,7 @@ Edit `$CLAUDE_CONFIG_DIR/hooks/peon-ping/config.json` (default: `~/.claude/hooks
 | `peasant_cz` | Human Peasant (Warcraft III, Czech) | "Ano, pane?", "Zase práce?", "Tak já teda jdu!" | [@vojtabiberle](https://github.com/vojtabiberle) |
 | `peasant_es` | Campesino Humano (Warcraft III, Spanish) | "¿Sí, mi lord?", "¡A trabajar!", "Siiii, mi señor." | [@Keralin](https://github.com/Keralin) |
 | `peasant_fr` | Human Peasant (Warcraft III, French) | "Oui, monseigneur?", "C'est fait!", "Prêt, monsieur." | [@thomasKn](https://github.com/thomasKn) |
+| `ra2_kirov` | Kirov Airship (Red Alert 2) | "Kirov reporting", "Bombardiers to your stations", "Helium mix optimal" | [@i-zhirov](https://github.com/i-zhirov) |
 | `ra2_soviet_engineer` | Soviet Engineer (Red Alert 2) | "Tools ready", "Yes, commander", "Engineering" | [@msukkari](https://github.com/msukkari) |
 | `peon_ru` | Orc Peon (Warcraft III, Russian) | "Готов вкалывать!", "Работа, работа.", "Оки-доки." | [@maksimfedin](https://github.com/maksimfedin) |
 | `peasant_ru` | Human Peasant (Warcraft III, Russian) | "Да, господин?", "Готово.", "Ну, я пошёл!" | [@maksimfedin](https://github.com/maksimfedin) |
@@ -111,6 +112,7 @@ Edit `$CLAUDE_CONFIG_DIR/hooks/peon-ping/config.json` (default: `~/.claude/hooks
 | `sc_medic` | Medic (StarCraft) | "The doctor is in", "Where does it hurt?", "All patched up!" | [@workdd](https://github.com/workdd) |
 | `sc_tank` | Siege Tank (StarCraft) | "Ready to roll out", "Absolutely", "Done and done" | [@workdd](https://github.com/workdd) |
 | `sc_vessel` | Science Vessel (StarCraft) | "Explorer reporting", "Receiving", "Affirmative" | [@workdd](https://github.com/workdd) |
+| `aom_greek` | Greek Villager (Age of Mythology) | "Prostagma?", "Etoimon", "Malista" | [@amitaifrey](https://github.com/amitaifrey) |
 
 Switch packs from the CLI:
 
