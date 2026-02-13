@@ -202,7 +202,8 @@ $hookScript = @'
 # Called by Claude Code hooks on SessionStart, Stop, Notification, PermissionRequest, UserPromptSubmit
 
 param(
-    [string]$Command = ""
+    [string]$Command = "",
+    [string]$Arg1 = ""
 )
 
 # --- CLI commands ---
@@ -272,8 +273,8 @@ if ($Command) {
                 (Get-ChildItem -Path (Join-Path $_.FullName "sounds") -File -ErrorAction SilentlyContinue | Measure-Object).Count -gt 0
             } | ForEach-Object { $_.Name } | Sort-Object
 
-            if ($args.Count -gt 0 -and $args[0]) {
-                $newPack = $args[0]
+            if ($Arg1) {
+                $newPack = $Arg1
             } else {
                 $idx = [array]::IndexOf($available, $cfg.active_pack)
                 $newPack = $available[($idx + 1) % $available.Count]
@@ -286,8 +287,8 @@ if ($Command) {
             return
         }
         "^--volume$" {
-            if ($args.Count -gt 0) {
-                $vol = [math]::Max(0, [math]::Min(1, [double]$args[0]))
+            if ($Arg1) {
+                $vol = [math]::Max(0, [math]::Min(1, [double]$Arg1))
                 $raw = Get-Content $ConfigPath -Raw
                 $raw = $raw -replace '"volume"\s*:\s*[\d.]+', "`"volume`": $vol"
                 Set-Content $ConfigPath -Value $raw -Encoding UTF8
