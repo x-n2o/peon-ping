@@ -22,6 +22,7 @@ AI coding agents don't notify you when they finish or need permission. You tab a
 - [What you'll hear](#what-youll-hear)
 - [Quick controls](#quick-controls)
 - [Configuration](#configuration)
+- [Peon Trainer](#peon-trainer)
 - [Multi-IDE support](#multi-ide-support)
 - [Remote development](#remote-development-ssh--devcontainers--codespaces)
 - [Mobile notifications](#mobile-notifications)
